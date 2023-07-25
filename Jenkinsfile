@@ -1,7 +1,7 @@
 pipeline{
 	agent none
 	stages{
-
+parallel {
 	stage('one'){
         steps{
         agent {label 'labelone'}
@@ -12,6 +12,7 @@ pipeline{
         steps{
         agent {label 'label2'}
         echo "LABEL 2"
+        }
         }
         }
 	}
