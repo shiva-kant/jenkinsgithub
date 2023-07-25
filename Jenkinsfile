@@ -1,12 +1,17 @@
-pipeline {
-    agent any
+pipeline
+{
+agent none
+stages 
+{
+	stage("stageone"){
+	agent {label "labelone"}
+	echo "NODE ONE"
+	}
 
-    stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World Again'
-            }
-        }
-    }
+	stage("stagetwo"){
+	agent {label "label2"}
+	echo "NODE TWO"
+	}
 }
 
+}
