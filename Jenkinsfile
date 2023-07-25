@@ -1,23 +1,29 @@
-pipeline{
-	agent none
-	stages{
+papeline{
+    agent none
 
+    stages{
+
+stage("parallelpipe")
+{
     parallel{
-       stage('stageone'){
-          agent {label 'labelone'}
-         steps{
-         echo "Hello label One"
-         }
+
+        stage("one"){
+        agent {label 'labelone'}
+        steps {
+        echo "Hello Label One"
+        }
+        }
+stage("two"){
+        agent {label 'label2'}
+        steps {
+        echo "Hello Label 2"
+        }
+        }
 
     }
-stage('stagetwo'){
-          agent {label 'label2'}
-         steps{
-         echo "Hello label Two"
-         }
 
-    }
-	}
 }
 
+
+    }
 }
