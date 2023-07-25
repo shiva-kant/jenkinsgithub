@@ -10,8 +10,8 @@ pipeline{
         }
         stage ('two'){
         steps{
-        agent {label 'label2'}
-        echo "LABEL 2"
+        agent {label 'label3'}
+        echo "LABEL 3 Added after "
         }
         }
 	}
