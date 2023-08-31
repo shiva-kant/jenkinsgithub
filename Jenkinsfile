@@ -8,14 +8,14 @@ stage("parallelpipe")
 {
     parallel{
 
-        stage("one"){
-        
+        stage('one'){
+        agent {label 'label1'}
         steps {
         echo "Hello Label One"
         }
         }
-stage("two"){
-        
+stage('two'){
+        agent {label 'label2'}
         steps {
         echo "Hello Label 2"
         }
