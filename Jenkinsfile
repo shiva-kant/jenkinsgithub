@@ -4,7 +4,7 @@ pipeline{
 
     stages{
 
-stage("parallelpipe")
+stage('parallelpipe')
 {
     parallel{
 
