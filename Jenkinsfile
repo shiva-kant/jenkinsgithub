@@ -1,3 +1,4 @@
+
 pipeline{
     agent none
 
@@ -19,13 +20,6 @@ stage("two"){
         echo "Hello Label 2"
         }
         }
-stage("three"){
-        agent any
-        steps {
-        echo "Hello Label 3"
-        }
-        }
-    }
 
 }
 
