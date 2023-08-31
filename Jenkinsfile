@@ -20,9 +20,6 @@ stage("two"){
         echo "Hello Label 2"
         }
         }
-
-}
-
-
     }
 }
+        
